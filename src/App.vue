@@ -8,6 +8,12 @@
     </v-toolbar>
 
     <v-content>
+      <v-btn color="error" to="home">
+        Home
+      </v-btn>
+      <v-btn color="primary" to="about">
+        About
+      </v-btn>
       <router-view />
     </v-content>
   </v-app>
