@@ -6,7 +6,7 @@
     :disabled="loading"
     class="white"
   >
-    {{ text }}
+    <slot>Zapisz</slot>
     <v-icon v-if="icon" right dark>icon</v-icon>
     <!-- Remove if don't want to use icon. -->
   </v-btn>
@@ -15,10 +15,6 @@
 export default {
   name: 'BaseButton',
   props: {
-    text: {
-      type: String,
-      default: 'Zapisz'
-    },
     loading: {
       type: Boolean,
       default: false

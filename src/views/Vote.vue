@@ -1,9 +1,9 @@
 <template>
   <v-container grid-list-sm
     >Vote {{ text }}
-    <BaseButton :loading="loading" @click="vote"></BaseButton>
+    <BaseButton :loading="loading" @click="vote">Ny</BaseButton>
     <BaseInput v-model="value" label="Pierwszy"></BaseInput>
-    <BaseInput v-model.trim="value"></BaseInput>
+    <BaseInput v-model.trim="value" solo></BaseInput>
     {{ value }}
   </v-container>
 </template>
