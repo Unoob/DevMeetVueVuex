@@ -1,7 +1,10 @@
 <template>
   <v-container grid-list-sm
     >Vote {{ text }}
-    <Button :loading="loading" @click="vote"></Button>
+    <BaseButton :loading="loading" @click="vote"></BaseButton>
+    <BaseInput v-model="value" label="Pierwszy"></BaseInput>
+    <BaseInput v-model.trim="value"></BaseInput>
+    {{ value }}
   </v-container>
 </template>
 <script>
@@ -20,7 +23,7 @@ export default {
     next()
   },
   data () {
-    return { text: 0, loading: false }
+    return { text: 0, loading: false, value: '' }
   },
   methods: {
     vote () {

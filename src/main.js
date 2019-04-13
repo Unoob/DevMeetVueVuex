@@ -5,8 +5,10 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import BaseButton from './components/Base/BaseButton'
+import BaseInput from './components/Base/BaseInput'
 Vue.config.productionTip = false
-Vue.component('Button', BaseButton)
+Vue.component('BaseButton', BaseButton)
+Vue.component('BaseInput', BaseInput)
 new Vue({
   router,
   store,
