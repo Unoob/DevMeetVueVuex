@@ -6,7 +6,7 @@ Vue.use(Router)
 let view = view => {
   return () => import(/* webpackChunkName: "about" */ `./views/${view}.vue`)
 }
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -31,3 +31,16 @@ export default new Router({
     }
   ]
 })
+router.beforeEach((to, from, next) => {
+  if (to.name !== 'home') {
+    let isAdmin = JSON.parse(localStorage.getItem('isAdmin'))
+    if (isAdmin) {
+      next()
+    } else {
+      next({ name: 'home' })
+    }
+  } else {
+    next()
+  }
+})
+export default router
