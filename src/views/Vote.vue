@@ -1,5 +1,5 @@
 <template>
-  <v-container grid-list-sm>VOte </v-container>
+  <v-container grid-list-sm>Vote </v-container>
 </template>
 <script>
 export default {
